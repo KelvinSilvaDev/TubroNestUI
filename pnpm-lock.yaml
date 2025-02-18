@@ -157,6 +157,9 @@ importers:
 
   apps/web:
     dependencies:
+      framer-motion:
+        specifier: ^12.4.3
+        version: 12.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next:
         specifier: ^13.4.1
         version: 13.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -169,6 +172,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-intersection-observer:
+        specifier: ^9.15.1
+        version: 9.15.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       ui:
         specifier: workspace:*
         version: link:../../packages/ui
@@ -3163,6 +3169,20 @@ packages:
   fraction.js@4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==, tarball: https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz}
 
+  framer-motion@12.4.3:
+    resolution: {integrity: sha512-rsMeO7w3dKyNG09o3cGwSH49iHU+VgDmfSSfsX+wfkO3zDA6WWkh4sUsMXd155YROjZP+7FTIhDrBYfgZeHjKQ==, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-12.4.3.tgz}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==, tarball: https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz}
     engines: {node: '>= 0.6'}
@@ -4011,6 +4031,12 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  motion-dom@12.0.0:
+    resolution: {integrity: sha512-CvYd15OeIR6kHgMdonCc1ihsaUG4MYh/wrkz8gZ3hBX/uamyZCXN9S9qJoYF03GqfTt7thTV/dxnHYX4+55vDg==, tarball: https://registry.npmjs.org/motion-dom/-/motion-dom-12.0.0.tgz}
+
+  motion-utils@12.0.0:
+    resolution: {integrity: sha512-MNFiBKbbqnmvOjkPyOKgHUp3Q6oiokLkI1bEwm5QA28cxMZrv0CbbBGDNmhF6DIXsi1pCQBSs0dX8xjeER1tmA==, tarball: https://registry.npmjs.org/motion-utils/-/motion-utils-12.0.0.tgz}
+
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==, tarball: https://registry.npmjs.org/mri/-/mri-1.2.0.tgz}
     engines: {node: '>=4'}
@@ -4557,6 +4583,15 @@ packages:
     resolution: {integrity: sha512-x+b7LxhmHXjHoU/VrFAzw5iutsILRoYyDq97EDYdFpPLcvqtEzk4ZSZSQjnFPbr5T57tLXnHcqFYoN1pI6u8uQ==, tarball: https://registry.npmjs.org/react-inspector/-/react-inspector-6.0.2.tgz}
     peerDependencies:
       react: ^16.8.4 || ^17.0.0 || ^18.0.0
+
+  react-intersection-observer@9.15.1:
+    resolution: {integrity: sha512-vGrqYEVWXfH+AGu241uzfUpNK4HAdhCkSAyFdkMb9VWWXs6mxzBLpWCxEy9YcnDNY2g9eO6z7qUtTBdA9hc8pA==, tarball: https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.15.1.tgz}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==, tarball: https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz}
@@ -9918,6 +9953,15 @@ snapshots:
 
   fraction.js@4.2.0: {}
 
+  framer-motion@12.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      motion-dom: 12.0.0
+      motion-utils: 12.0.0
+      tslib: 2.5.0
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   fresh@0.5.2: {}
 
   fs-constants@1.0.0: {}
@@ -10820,6 +10864,12 @@ snapshots:
 
   mkdirp@1.0.4: {}
 
+  motion-dom@12.0.0:
+    dependencies:
+      motion-utils: 12.0.0
+
+  motion-utils@12.0.0: {}
+
   mri@1.2.0: {}
 
   ms@2.0.0: {}
@@ -11436,6 +11486,12 @@ snapshots:
   react-inspector@6.0.2(react@18.2.0):
     dependencies:
       react: 18.2.0
+
+  react-intersection-observer@9.15.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+    optionalDependencies:
+      react-dom: 18.2.0(react@18.2.0)
 
   react-is@16.13.1: {}
 
