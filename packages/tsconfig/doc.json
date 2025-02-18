@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Docusaurus",
+    "extends": "./base.json",
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "module": "ESNext",
+      "target": "ES6",
+      "lib": ["DOM", "ES2020"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "strict": false,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["../../packages/ui/*"]
+      }
+    },
+    "include": ["src", "docusaurus.config.ts"],
+    "exclude": ["node_modules", ".docusaurus", "build"]
+  }
+  
