@@ -1,6 +1,5 @@
 {
   "name": "turbo-shad-storybook-starter",
-  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -11,6 +10,7 @@
     "dev:ui": "turbo run dev --filter ui --filter storybook",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
     "ui:add": "pnpm --filter ui ui:add"
   },
   "devDependencies": {
@@ -20,5 +20,5 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@7.15.0"
+  "packageManager": "pnpm@9.0.0"
 }
